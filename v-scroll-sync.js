@@ -46,7 +46,7 @@ const VScrollSync = {
                     }
                 },
             }, vnode) {
-                group = vnode.context[group];
+                group = vnode.context[group] ?? group;
                 if (!('x' in modifiers || 'y' in modifiers)) {
                     modifiers.x = true;
                     modifiers.y = true;
